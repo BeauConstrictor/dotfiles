@@ -1,3 +1,40 @@
+-- Bootstrap lazy.nvim
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+  local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+  if vim.v.shell_error ~= 0 then
+    vim.api.nvim_echo({
+      { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+      { out, "WarningMsg" },
+      { "\nPress any key to exit..." },
+    }, true, {})
+    vim.fn.getchar()
+    os.exit(1)
+  end
+end
+vim.opt.rtp:prepend(lazypath)
+
+-- settings
+
+local opt = vim.opt
+
+opt.clipboard = "unnamedplus"
+
+opt.hidden = true
+
+opt.tabstop = 4
+opt.shiftwidth = 4
+opt.expandtab = true
+
+opt.number = true
+opt.relativenumber = true
+opt.laststatus = 0
+opt.mouse = ""
+
+vim.g.mapleader = " "
+local map = vim.keymap.set
+
 -- plugins
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -39,28 +76,8 @@ require('neoscroll').setup({
       'WinScrolled', 'CursorMoved'
   },
 })
--- settings
-
-local opt = vim.opt
-
-opt.clipboard = "unnamedplus"
-
-opt.hidden = true
-
-opt.tabstop = 4
-opt.shiftwidth = 4
-opt.expandtab = true
-
-opt.number = true
-opt.relativenumber = true
-opt.laststatus = 0
-opt.mouse = ""
-
 
 -- keybinds
-
-vim.g.mapleader = " "
-local map = vim.keymap.set
 
 map("n", "<leader>z", "<cmd>bprev<CR>")
 map("n", "<leader>x", "<cmd>bdelete<CR>")
