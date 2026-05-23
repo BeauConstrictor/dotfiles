@@ -1,15 +1,21 @@
 if status is-interactive
-
     set -U fish_greeting
+end
 
+function ls
+    command ls -lah $argv[1] --color=always
+end
+
+function vi
+    nvim $argv
 end
 
 function fish_prompt
     echo ""
-    set left (set_color brblack)beau(set_color normal)@fedora" "(set_color brblack)(prompt_pwd)
+    set left (set_color brblack)beau(set_color normal)@fedora" "(set_color brblack)(prompt_pwd)(set_color normal)
     # set left "beau@fedora ~"
 
-    set right (date "+%H:%M:%S")
+    set right [(date "+%H:%M:%S")]" "
 
     set width (tput cols)
     set left_len (string length --visible $left)
