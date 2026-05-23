@@ -31,3 +31,8 @@ function fish_prompt
 
     printf (set_color normal)"> "(set_color green)"\$ "(set_color normal)
 end
+
+set PATH ~/.local/bin $PATH
+set PATH ~/bin $PATH
+
+set -gx MADLAD_INSTALL ~/.local/share/madlad
