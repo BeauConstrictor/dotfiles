@@ -33,8 +33,10 @@ source $ZSH/oh-my-zsh.sh
 plugins=(git fzf-tab)
 
 export PATH="/home/beau/bin:$PATH"
-export PATH=/home/beau/.nimble/bin:$PATH
 export PATH="/home/beau/.local/bin:$PATH"
+export PATH=/home/beau/.nimble/bin:$PATH
+
+export MADLAD_INSTALL=~/.local/share/madlad/
 
 export LSOPTIONS="-lah"
 export EDTIOR="nvim"
@@ -42,6 +44,7 @@ export EDTIOR="nvim"
 export CEED_INSTALL=~/.local/share/ceed/
 
 alias vi=nvim
+alias music=cmus
 
 unalias ls
 ls() { command ls --color=always -lah "${@:-.}" }
@@ -49,4 +52,3 @@ hex() { xxd -g 1 -Ralways "${@:-.}" }
 
 cpdir() { find "$1" -type f -print0 | while IFS= read -r -d '' f; do; echo "=== $f ==="; cat "$f"; done | wl-copy }
 clear
-sleep 0.5
