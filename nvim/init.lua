@@ -23,8 +23,8 @@ opt.clipboard = "unnamedplus"
 
 opt.hidden = true
 
-opt.tabstop = 4
-opt.shiftwidth = 4
+opt.tabstop = 2
+opt.shiftwidth = 2
 opt.expandtab = true
 
 opt.number = true
@@ -49,12 +49,19 @@ require("lazy").setup({
   { "maxbane/vim-asm_ca65" },
   { "karb94/neoscroll.nvim" },
   { "zah/nim.vim" },
+  { "folke/zen-mode.nvim" },
 })
 
 require("telescope").setup({
   defaults = {
     layout_strategy = "horizontal",
     file_ignore_patterns = { "__pycache__", ".git" },
+  },
+})
+
+require("zen-mode").setup({
+  window = {
+    width = 70,
   },
 })
 
@@ -82,6 +89,7 @@ require('neoscroll').setup({
 map("n", "<leader>z", "<cmd>bprev<CR>")
 map("n", "<leader>x", "<cmd>bdelete<CR>")
 map("n", "<leader>c", "<cmd>bnext<CR>")
+map("n", "<leader>a", "<cmd>ZenMode<CR>") 
 
 map("n", "<leader>o", "<cmd>Telescope find_files<CR>") 
 
@@ -120,20 +128,25 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
--- python
-vim.api.nvim_create_autocmd("FileType", {
-  group = augroup("py_build", { clear = true }),
-  pattern = "python",
-  callback = function()
-    vim.keymap.set("n", "<leader>m",
-      "<cmd>tab terminal source ./build.sh<CR>",
-      { buffer = true })
+vim.opt.wrap = true
+vim.opt.linebreak = true
+vim.opt.textwidth = 0
+vim.opt.list = false
 
-    vim.keymap.set("n", "<leader>r",
-      "<cmd>tab terminal source ./run.sh<CR>",
-      { buffer = true })
-  end,
-})
+-- python
+-- vim.api.nvim_create_autocmd("FileType", {
+--   group = augroup("py_build", { clear = true }),
+--   pattern = "python",
+--   callback = function()
+--     vim.keymap.set("n", "<leader>m",
+--       "<cmd>tab terminal source ./build.sh<CR>",
+--       { buffer = true })
+-- 
+--     vim.keymap.set("n", "<leader>r",
+--       "<cmd>tab terminal source ./run.sh<CR>",
+--       { buffer = true })
+--   end,
+-- })
 
 -- aliases
 
@@ -149,6 +162,7 @@ end
 
 opt.termguicolors = true
 opt.background = "dark"
+vim.g.gruvbox_contrast_dark = "hard"
 vim.cmd("colorscheme gruvbox")
 
 opt.colorcolumn = "70"
