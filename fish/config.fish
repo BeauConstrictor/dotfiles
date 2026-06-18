@@ -2,12 +2,20 @@ if status is-interactive
     set -U fish_greeting
 end
 
-function ls
-    command ls -lah $argv[1] --color=always
+abbr -a vi nvim
+abbr -a ls ls -lah
+abbr -a tilde ssh beauconstrictor@tilde.team
+abbr -a p passwords.sh
+abbr -a p passwords.sh
+abbr -a amend git commit --amend
+
+function mail
+  thunderbird > /dev/null 2>&1 &
 end
 
-function vi
-    nvim $argv
+function commit
+  git add .
+  git commit
 end
 
 function fish_prompt
@@ -34,5 +42,8 @@ end
 
 set PATH ~/.local/bin $PATH
 set PATH ~/bin $PATH
+
+set -gx PASSWORDS ~/documents/passwords.yaml.gpg
+set -gx EDITOR nvim
 
 set -gx MADLAD_INSTALL ~/.local/share/madlad

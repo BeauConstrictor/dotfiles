@@ -4,6 +4,8 @@ c.colors.webpage.darkmode.enabled = True
 config.set("colors.webpage.preferred_color_scheme", "dark")
 c.downloads.location.directory = "~/downloads"
 c.downloads.location.prompt = False
+c.tabs.position = "right"
+c.tabs.width = "25%"
 
 # Gruvbox Dark Theme for qutebrowser
 # Save this as ~/.config/qutebrowser/config.py or add it to your existing config

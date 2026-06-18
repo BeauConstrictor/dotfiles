@@ -3,9 +3,11 @@
   "lazy.nvim": { "branch": "main", "commit": "85c7ff3711b730b4030d03144f6db6375044ae82" },
   "neoscroll.nvim": { "branch": "master", "commit": "c8d29979cb0cb3a2437a8e0ae683fd82f340d3b8" },
   "nim.vim": { "branch": "master", "commit": "a15714fea392b0f06ff2b282921a68c7033e39a2" },
+  "nvim-colorizer.lua": { "branch": "master", "commit": "a065833f35a3a7cc3ef137ac88b5381da2ba302e" },
   "plenary.nvim": { "branch": "master", "commit": "74b06c6c75e4eeb3108ec01852001636d85a932b" },
   "telescope.nvim": { "branch": "master", "commit": "7d324792b7943e4aa16ad007212e6acc6f9fe335" },
   "terminus": { "branch": "main", "commit": "47247474350e3c2cae12220ef06bed975b7be2dc" },
   "vim-asm_ca65": { "branch": "master", "commit": "57e1203db2411c2541b55a13c3498d282c0236f3" },
-  "vim-man": { "branch": "master", "commit": "cfdc78f52707b4df76cbe57552a7c8c28a390da4" }
+  "vim-man": { "branch": "master", "commit": "cfdc78f52707b4df76cbe57552a7c8c28a390da4" },
+  "zen-mode.nvim": { "branch": "main", "commit": "8564ce6d29ec7554eb9df578efa882d33b3c23a7" }
 }

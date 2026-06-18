@@ -35,6 +35,8 @@ opt.mouse = ""
 vim.g.mapleader = " "
 local map = vim.keymap.set
 
+opt.termguicolors = true
+
 -- plugins
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -50,6 +52,7 @@ require("lazy").setup({
   { "karb94/neoscroll.nvim" },
   { "zah/nim.vim" },
   { "folke/zen-mode.nvim" },
+  { "norcalli/nvim-colorizer.lua" },
 })
 
 require("telescope").setup({
@@ -83,6 +86,8 @@ require('neoscroll').setup({
       'WinScrolled', 'CursorMoved'
   },
 })
+
+require('colorizer').setup()
 
 -- keybinds
 
@@ -160,7 +165,6 @@ if vim.g.neovide then
   vim.g.neovide_scale_factor = 0.85
 end
 
-opt.termguicolors = true
 opt.background = "dark"
 vim.g.gruvbox_contrast_dark = "hard"
 vim.cmd("colorscheme gruvbox")
