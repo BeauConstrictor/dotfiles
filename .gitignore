@@ -1,0 +1,12 @@
+# this way i can copy everything over and not bother deleting
+# irrelevant stuff
+*
+!fish
+!kitty
+!nvim
+!qutebrowser
+!sway
+!waybar
+!amfora
+!rofi
+!.gitignore
