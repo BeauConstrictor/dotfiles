@@ -104,7 +104,7 @@ map("n", "<leader>f", "<cmd>Telescope current_buffer_fuzzy_find<CR>")
 
 map("n", "<C-m>", ":Vman ")
 
-map("n", "<leader>t", "<cmd>tab terminal<CR>i")
+map("n", "<leader>t", "<cmd>tab terminal fish<CR>i")
 
 map("n", "<leader>m", "<cmd>tab terminal make -B<CR>")
 map("n", "<leader>r", "<cmd>tab terminal make run<CR>")

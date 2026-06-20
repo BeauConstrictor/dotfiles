@@ -27,7 +27,8 @@ set $rofi_cmd rofi \
 # Shows a combined list of the applications with desktop files and
 # executables from PATH.
 # TODO: add window with the next release of rofi-wayland
-set $menu $rofi_cmd -show combi -combi-modes drun -theme ~/.config/rofi/config.rasi
+set $menu $rofi_cmd -show combi -combi-modes drun
+set $files $rofi_cmd -show filebrowser
 
 ### Output configuration
 #
@@ -85,6 +86,7 @@ input type:touchpad {
 
     # Start your launcher
     bindsym $mod+d exec $menu
+    bindsym $mod+q exec $files
 
     # Take a screenshot
     bindsym $mod+s exec $screenshot
