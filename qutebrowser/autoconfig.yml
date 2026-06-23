@@ -9,7 +9,7 @@ settings:
   content.javascript.clipboard:
     https://chatgpt.com: access-paste
   tabs.position:
-    global: right
+    global: top
   tabs.width:
     global: 25%
   url.default_page:
