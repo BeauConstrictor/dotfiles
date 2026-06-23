@@ -6,7 +6,14 @@
 
 config_version: 2
 settings:
+  content.javascript.clipboard:
+    https://chatgpt.com: access-paste
   tabs.position:
-    global: top
+    global: right
   tabs.width:
     global: 25%
+  url.default_page:
+    global: about:blank
+  url.start_pages:
+    global:
+    - about:blank

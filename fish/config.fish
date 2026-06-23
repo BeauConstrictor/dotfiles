@@ -8,6 +8,7 @@ abbr -a tilde ssh beauconstrictor@tilde.team
 abbr -a p passwords.sh
 abbr -a p passwords.sh
 abbr -a amend git commit --amend
+abbr -a log git log --oneline --graph
 
 function mail
   thunderbird > /dev/null 2>&1 &
@@ -42,6 +43,7 @@ end
 
 set PATH ~/.local/bin $PATH
 set PATH ~/bin $PATH
+set PATH ~/.nimble/bin $PATH
 
 set -gx PASSWORDS ~/documents/passwords.yaml.gpg
 set -gx EDITOR nvim

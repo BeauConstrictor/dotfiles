@@ -7,6 +7,8 @@ c.downloads.location.prompt = False
 c.tabs.position = "right"
 c.tabs.width = "25%"
 
+c.content.javascript.clipboard = "access-paste"
+
 # Gruvbox Dark Theme for qutebrowser
 # Save this as ~/.config/qutebrowser/config.py or add it to your existing config
 
