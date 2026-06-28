@@ -53,6 +53,8 @@ require("lazy").setup({
   { "zah/nim.vim" },
   { "folke/zen-mode.nvim" },
   { "norcalli/nvim-colorizer.lua" },
+  { "vim-scripts/improved-ansiesc" },
+  { "stevearc/oil.nvim" },
 })
 
 require("telescope").setup({
@@ -89,12 +91,28 @@ require('neoscroll').setup({
 
 require('colorizer').setup()
 
+require('oil').setup({
+  columns = {
+    "permissions",
+    "size",
+    "mtime"
+  },
+  skip_confirm_for_simple_edits = true,
+  view_options = {
+    show_hidden = true
+  }
+})
+
 -- keybinds
+
+map("n", ":", "q:i")
 
 map("n", "<leader>z", "<cmd>bprev<CR>")
 map("n", "<leader>x", "<cmd>bdelete<CR>")
 map("n", "<leader>c", "<cmd>bnext<CR>")
+
 map("n", "<leader>a", "<cmd>ZenMode<CR>") 
+map("n", "<leader>n", "<cmd>Oil .<CR>") 
 
 map("n", "<leader>o", "<cmd>Telescope find_files<CR>") 
 

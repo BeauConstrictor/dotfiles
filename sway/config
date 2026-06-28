@@ -16,7 +16,7 @@ set $right l
 # Your preferred terminal emulator
 # Recommends: foot
 set $term kitty
-set $browser qutebrowser ":cmd-later 1000 spawn --userscript verttwidth1"
+set $browser qutebrowser
 set $screenshot ~/bin/screenshot
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened

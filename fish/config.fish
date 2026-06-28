@@ -9,6 +9,7 @@ abbr -a p passwords.sh
 abbr -a p passwords.sh
 abbr -a amend git commit --amend
 abbr -a log git log --oneline --graph
+abbr -a o xdg-open
 
 function mail
   thunderbird > /dev/null 2>&1 &
