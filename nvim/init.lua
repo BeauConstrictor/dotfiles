@@ -112,7 +112,7 @@ map("n", "<leader>x", "<cmd>bdelete<CR>")
 map("n", "<leader>c", "<cmd>bnext<CR>")
 
 map("n", "<leader>a", "<cmd>ZenMode<CR>") 
-map("n", "<leader>n", "<cmd>Oil .<CR>") 
+map("n", "-", "<cmd>Oil .<CR>") 
 
 map("n", "<leader>o", "<cmd>Telescope find_files<CR>") 
 
